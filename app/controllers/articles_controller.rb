@@ -64,6 +64,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title,:content)
+      params.require(:article).permit(:title,:content).merge(user_id: current_user.id)
     end
 end
