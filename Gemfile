@@ -64,3 +64,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'unicorn', '5.4.1'
 end
+
+gem 'devise' # ログイン機能で使用
+gem 'pry-rails' # デバッグに使用
+gem 'rails-i18n' # 日本語化に使用
+gem 'mini_magick' # 画像投稿機能に使用
+gem 'actiontext' # 編集機能用
+gem 'image_processing', '~> 1.2' 
+gem 'kaminari' # ページネーションに使用
