@@ -1,0 +1,11 @@
+.text-comment-like{
+  display: flex;
+  justify-content: right;
+}
+
+
+.cabbage-top{
+  color:white;
+  /* background-color: aqua; */
+  /* background-image: url('../../assets/images/cabbage.jpeg'); */
+}
