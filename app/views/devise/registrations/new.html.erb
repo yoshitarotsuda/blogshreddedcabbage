@@ -1,0 +1,27 @@
+<%= link_to 'トップページへ戻る',root_path %>
+<h2>新規登録</h2>
+
+<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+<p>確認メールの送信がなく、個人情報の取り扱いも難しいので<br>登録してクイズを投稿したい方はemailに「test1@test.com」、passwordに「t11111」<br>このような適当なメールアドレスパスワードで登録することを推奨します。<br>入力が弾かれる場合は数値を変更するとおそらく登録できます。</p>
