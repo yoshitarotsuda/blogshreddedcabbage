@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_area :title, placeholder:"記事名（必須です 60文字まで)", maxlength:"60" %>
+    <%= form.rich_text_area :content %>
   </div>
 
   <div class="actions">
