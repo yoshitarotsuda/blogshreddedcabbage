@@ -12,7 +12,11 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = Article.new
+    if user_signed_in?
+      @article = Article.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /articles/1/edit
