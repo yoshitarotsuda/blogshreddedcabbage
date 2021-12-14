@@ -8,26 +8,40 @@
     </div>
 </header>
 <!-- Page content-->
-<%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+<%# <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
 <div class="container">
     <div class="row">
         <!-- Blog entries-->
         <div class="col-lg-8">
             <!-- Featured blog post-->
-            <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                <div class="card-body">
-                    <div class="small text-muted">投稿日</div>
-                    <h2 class="card-title"></h2>
-                    <p class="card-text">タグ</p>
-                    <a class="btn btn-primary" href="#!">読む →</a>
-                    <a class="btn btn-primary" href="#!">詳細</a>
-                    <div class="text-comment-like">
-                      <div class="small text-muted">コメント数 0</div>
-                      <div class="small text-muted">いいね！ 0 合ってる？ 0</div>
-                    </div>
-                </div>
-            </div>
+            <% if @articles[5].present?%>
+              <%= @articles[5].title%>
+            <% end %>
+            <% if @articles.present? %>
+              <% article_count = 0 %>
+              <% @articles.each do |article|%>
+              <div class="card mb-4">
+                  <a href="#!">
+                    <% if article.image.present? %>
+                      <%= image_tag article.image ,class:"card-img-top" %>
+                    <% else %>
+                      <img class="card-img-top" src="<%= asset_path('cabbage.jpeg')%>" alt="..." />
+                    <% end %>
+                  </a>
+                  <div class="card-body">
+                      <div class="small text-muted"><%= article.created_at%></div>
+                      <h2 class="card-title"><%= article.title %></h2>
+                      <p class="card-text">タグ</p>
+                      <a class="btn btn-primary" href="#!">読む</a>
+                      <div class="text-comment-like">
+                        <div class="small text-muted">コメント数 0</div>
+                        <div class="small text-muted">いいね！ 0 合ってる？ 0</div>
+                      </div>
+                  </div>
+              </div>
+              <% article_count += 1 %>
+              <% end %>
+            <% end %>
             <!-- Nested row for non-featured blog posts-->
             <div class="row">
                 <div class="col-lg-6">
@@ -93,7 +107,7 @@
         <div class="col-lg-4">
             <!-- Search widget-->
             <div class="card mb-4">
-                <div class="card-header">Search</div>
+                <div class="card-header">タイトル検索</div>
                 <div class="card-body">
                     <div class="input-group">
                         <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
