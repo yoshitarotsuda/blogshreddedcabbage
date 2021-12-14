@@ -1,0 +1,19 @@
+<div class="card mb-4">
+  <a href="#!">
+    <% if article.image.present? %>
+      <%= image_tag article.image ,class:"card-img-top" %>
+    <% else %>
+      <img class="card-img-top" src="<%= asset_path('cabbage.jpeg')%>" alt="..." />
+    <% end %>
+  </a>
+  <div class="card-body">
+      <div class="small text-muted"><%= article.created_at%></div>
+      <h2 class="card-title"><%= article.title %></h2>
+      <p class="card-text">タグ</p>
+      <a class="btn btn-primary" href="<%= article_path(article.id)%>">読む</a>
+      <div class="text-comment-like">
+        <div class="small text-muted">コメント数 0</div>
+        <div class="small text-muted">いいね！ 0 合ってる？ 0</div>
+      </div>
+  </div>
+</div>
