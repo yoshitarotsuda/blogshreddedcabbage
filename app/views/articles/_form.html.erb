@@ -13,6 +13,8 @@
 
   <div class="field">
     <%= form.text_area :title, placeholder:"記事名（必須です 60文字まで)", maxlength:"60" %>
+    <p>サムネイルを選択してください(任意)</p>
+    <%= form.file_field :image, id:"article-image" %>
     <%= form.rich_text_area :content %>
   </div>
 
