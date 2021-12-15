@@ -12,9 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.text_area :title, placeholder:"記事名（必須です 60文字まで)", maxlength:"60" %>
-    <p>サムネイルを選択してください(任意)</p>
+    <%= form.text_field :title, placeholder:"記事名（必須です 60文字まで)", maxlength:"60" %>
+    <p>サムネイルを選択してください(任意です)</p>
     <%= form.file_field :image, id:"article-image" %>
+    <p></p>
+    <p>タグを設定してください(任意です)</p>
+    <%= form.text_field :tag_names,placeholder:",で区切ってください"%>
     <p></p>
     <%= form.rich_text_area :content %>
   </div>
