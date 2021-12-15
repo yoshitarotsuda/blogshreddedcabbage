@@ -26,7 +26,8 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
-
+    tag_list = params[:article][:tag_names].split(",")
+    @article.tags_save(tag_list)
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: "Article was successfully created." }
