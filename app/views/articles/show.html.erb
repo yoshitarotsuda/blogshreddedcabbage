@@ -1,8 +1,19 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <p>
-      <strong>Title:</strong>
-      <%= @article.title %>
+    <strong>タイトル:</strong>
+    <%= @article.title %>
+  </p>
+    <strong>タグ:</strong>
+    <% if @article.tags.present? %>
+        <% @article.tags.each do |tag| %>
+        <%= tag.tag_name %>
+        <% end %>
+      <% else %>
+        <a>その他</a>
+      <% end %>
+  <p>
+
   </p>
   <div class="card mb-4">
     <%= @article.content%>  

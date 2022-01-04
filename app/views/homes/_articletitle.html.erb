@@ -9,7 +9,15 @@
   <div class="card-body">
       <div class="small text-muted"><%= article.created_at%></div>
       <h2 class="card-title"><%= article.title %></h2>
-      <p class="card-text">タグ</p>
+      <p class="card-text">
+      <% if article.tags.present? %>
+        <% article.tags.each do |tag| %>
+        <%= tag.tag_name %>
+        <% end %>
+      <% else %>
+        <a>その他</a>
+      <% end %>
+      </p>
       <a class="btn btn-primary" href="<%= article_path(article.id)%>">読む</a>
       <div class="text-comment-like">
         <div class="small text-muted">コメント数 0</div>

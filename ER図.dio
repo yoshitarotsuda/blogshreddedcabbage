@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="iK9eycRJPg6SYrZd0W95" name="ページ１">
-        <mxGraphModel dx="517" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="418" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="VafTBtpye_XPdqLhDcZI-0"/>
                 <mxCell id="VafTBtpye_XPdqLhDcZI-1" parent="VafTBtpye_XPdqLhDcZI-0"/>
@@ -28,7 +28,7 @@
                 <mxCell id="drJjomzJPlkLiz0vsGmV-48" value="ititle (string型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
                     <mxGeometry y="26" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="drJjomzJPlkLiz0vsGmV-49" value="content (text型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
+                <mxCell id="drJjomzJPlkLiz0vsGmV-49" value="content (text型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#3333FF;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
                     <mxGeometry y="56" width="280" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="drJjomzJPlkLiz0vsGmV-58" value="user (references型, NOT NULL, 外部キー)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
